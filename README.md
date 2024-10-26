@@ -542,3 +542,40 @@ Area of the circle: 78.53981633974483
 Area of the rectangle: 24.0
 Area of the triangle: 6.0
 ```
+### 12. Java Program Demonstrating an Interface
+
+```java
+// Interface
+public interface Vehicle {
+    void move(); // Abstract method
+}
+
+// Class Implementing the Interface - Car
+public class Car implements Vehicle {
+    @Override
+    public void move() {
+        System.out.println("The car drives on the road");
+    }
+}
+
+// Class Implementing the Interface - Bicycle
+public class Bicycle implements Vehicle {
+    @Override
+    public void move() {
+        System.out.println("The bicycle rides on the road");
+    }
+}
+
+// Main Class
+public class Main {
+    public static void main(String[] args) {
+        Vehicle myCar = new Car();
+        Vehicle myBicycle = new Bicycle();
+
+        // Calling the move method on both objects
+        myCar.move(); // Calls the overridden method in Car
+        myBicycle.move(); // Calls the overridden method in Bicycle
+    }
+}
+
+```
