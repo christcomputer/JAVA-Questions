@@ -645,3 +645,45 @@ public class Main {
 }
 
 ```
+### 14. Handle Arithmetic exception (zero division error)
+```java
+import java.util.Scanner;
+
+public class DivisionCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            // Prompt user to enter two numbers
+            System.out.print("Enter the numerator: ");
+            int numerator = scanner.nextInt();
+
+            System.out.print("Enter the denominator: ");
+            int denominator = scanner.nextInt();
+
+            // Perform division
+            int result = divide(numerator, denominator);
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero is not allowed.");
+        } catch (Exception e) {
+            System.out.println("An unexpected error occurred: " + e.getMessage());
+        } finally {
+            scanner.close();
+            System.out.println("Program has ended.");
+        }
+    }
+
+    // Method to perform division
+    public static int divide(int numerator, int denominator) throws ArithmeticException {
+        return numerator / denominator;
+    }
+}
+
+```
+```
+Enter the numerator: 1
+Enter the denominator: 0
+Error: Division by zero is not allowed.
+Program has ended.
+```
