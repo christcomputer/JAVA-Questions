@@ -17,7 +17,7 @@ public class CommandLineArguments {
 
 ```
 ```sh
-java CommandLineArguments hello world how
+java .\CommandLineArguments.java hello world how
 ```
 * output
 ```
