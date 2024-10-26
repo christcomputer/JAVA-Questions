@@ -281,3 +281,43 @@ The sum of the two matrices is:
 22 27
 28 36
 ```
+
+### 7. Check a number Palindrome or not
+
+```java
+import java.util.Scanner;
+
+public class PalindromeNumberChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter a number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        int originalNumber = number;
+        int reversedNumber = 0;
+
+        // Reverse the number using a while loop
+        while (number != 0) {
+            int digit = number % 10;
+            reversedNumber = reversedNumber * 10 + digit;
+            number /= 10;
+        }
+
+        // Check if the original number is equal to the reversed number
+        if (originalNumber == reversedNumber) {
+            System.out.println(originalNumber + " is a palindrome.");
+        } else {
+            System.out.println(originalNumber + " is not a palindrome.");
+        }
+
+        scanner.close();
+    }
+}
+
+```
+
+```sh
+Enter a number: 121
+121 is a palindrome.
+```
