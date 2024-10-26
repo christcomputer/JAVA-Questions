@@ -76,7 +76,7 @@ public class SwapNumbers {
         int secondNumber = scanner.nextInt();
 
         // Display original values
-        System.out.println("Before swap: ");
+        System.out.println("\nBefore swap: ");
         System.out.println("First number: " + firstNumber);
         System.out.println("Second number: " + secondNumber);
 
@@ -86,7 +86,7 @@ public class SwapNumbers {
         secondNumber = temp;
 
         // Display swapped values
-        System.out.println("After swap: ");
+        System.out.println("\nAfter swap: ");
         System.out.println("First number: " + firstNumber);
         System.out.println("Second number: " + secondNumber);
 
