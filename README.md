@@ -16,6 +16,7 @@ public class CommandLineArguments {
 }
 
 ```
+* write in the shell
 ```sh
 java .\CommandLineArguments.java hello world how
 ```
