@@ -26,3 +26,37 @@ Argument 1: hello
 Argument 2: world
 Argument 3: how
 ```
+
+### 2. Enter a number check weather it is odd or even
+
+```java
+import java.util.Scanner;
+
+public class OddEvenChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompt user to enter a number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        
+        // Check if the number is even or odd
+        if (number % 2 == 0) {
+            System.out.println(number + " is even.");
+        } else {
+            System.out.println(number + " is odd.");
+        }
+        
+        scanner.close();
+    }
+}
+
+```
+
+* output
+  
+```sh
+Enter a number: 5
+5 is odd.
+```
+
