@@ -22,7 +22,7 @@ java CommandLineArguments hello world how
 * output
 ```
 Number of command-line arguments: 3
-Argument 1: arg1
-Argument 2: arg2
-Argument 3: arg3
+Argument 1: hello
+Argument 2: world
+Argument 3: how
 ```
