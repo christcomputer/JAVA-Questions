@@ -106,7 +106,7 @@ After swap:
 First number: 20 
 Second number: 10
 ```
-### 4.Java Program to Find the Sum of Elements in an Array
+### 4. Java Program to Find the Sum of Elements in an Array
 
 ```java
 import java.util.Scanner;
