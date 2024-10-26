@@ -288,12 +288,9 @@ The sum of the two matrices is:
 import java.util.Scanner;
 
 public class PalindromeNumberChecker {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        // Prompt user to enter a number
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
+    // Function to check if a number is a palindrome
+    public static boolean isPalindrome(int number) {
         int originalNumber = number;
         int reversedNumber = 0;
 
@@ -305,15 +302,27 @@ public class PalindromeNumberChecker {
         }
 
         // Check if the original number is equal to the reversed number
-        if (originalNumber == reversedNumber) {
-            System.out.println(originalNumber + " is a palindrome.");
+        return originalNumber == reversedNumber;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter a number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        // Check if the number is a palindrome
+        if (isPalindrome(number)) {
+            System.out.println(number + " is a palindrome.");
         } else {
-            System.out.println(originalNumber + " is not a palindrome.");
+            System.out.println(number + " is not a palindrome.");
         }
 
         scanner.close();
     }
 }
+
 
 ```
 
