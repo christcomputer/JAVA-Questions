@@ -419,3 +419,41 @@ Enter the first number: 10
 Enter the second number: 12
 The sum of 10 and 12 is 22
 ```
+### 10. Java Program Demonstrating Method Overriding
+
+```java
+// Superclass
+public class Animal {
+    // Method in the superclass
+    public void makeSound() {
+        System.out.println("The animal makes a sound");
+    }
+}
+
+// Subclass
+public class Dog extends Animal {
+    // Overriding the makeSound method in the subclass
+    @Override
+    public void makeSound() {
+        System.out.println("The dog barks");
+    }
+}
+
+// Main Class
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();  // Create an Animal object
+        Animal myDog = new Dog();  // Create a Dog object, but as an Animal reference
+
+        // Call the makeSound method on both objects
+        myAnimal.makeSound();  // Calls the method from the Animal class
+        myDog.makeSound();  // Calls the overridden method from the Dog class
+    }
+}
+
+```
+
+```sh
+The animal makes a sound
+The dog barks
+```
