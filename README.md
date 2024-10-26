@@ -579,3 +579,69 @@ public class Main {
 }
 
 ```
+
+### 13. Java Program Demonstrating Encapsulation
+
+```java
+// Class representing a Person
+public class Person {
+    // Private fields (variables) - encapsulated data
+    private String name;
+    private int age;
+
+    // Constructor to initialize the name and age
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Public method to get the name
+    public String getName() {
+        return name;
+    }
+
+    // Public method to set the name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Public method to get the age
+    public int getAge() {
+        return age;
+    }
+
+    // Public method to set the age
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        } else {
+            System.out.println("Age must be positive");
+        }
+    }
+
+    // Public method to display the person's details
+    public void displayPerson() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+// Main Class
+public class Main {
+    public static void main(String[] args) {
+        // Create a new Person object
+        Person person = new Person("John", 25);
+
+        // Display initial details
+        person.displayPerson();
+
+        // Modify the person's details using public methods
+        person.setName("Jane");
+        person.setAge(30);
+
+        // Display updated details
+        person.displayPerson();
+    }
+}
+
+```
