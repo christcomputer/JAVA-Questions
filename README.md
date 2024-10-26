@@ -59,4 +59,54 @@ public class OddEvenChecker {
 Enter a number: 5
 5 is odd.
 ```
+### 3. Write a program to swap two numbers in java
 
+```java
+import java.util.Scanner;
+
+public class SwapNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter two numbers
+        System.out.print("Enter the first number: ");
+        int firstNumber = scanner.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int secondNumber = scanner.nextInt();
+
+        // Display original values
+        System.out.println("Before swap: ");
+        System.out.println("First number: " + firstNumber);
+        System.out.println("Second number: " + secondNumber);
+
+        // Swap the numbers
+        int temp = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = temp;
+
+        // Display swapped values
+        System.out.println("After swap: ");
+        System.out.println("First number: " + firstNumber);
+        System.out.println("Second number: " + secondNumber);
+
+        scanner.close();
+    }
+}
+
+```
+
+* output
+
+```sh
+Enter the first number: 10 
+Enter the second number: 20
+
+Before swap:     
+First number: 10 
+Second number: 20
+
+After swap:      
+First number: 20 
+Second number: 10
+```
