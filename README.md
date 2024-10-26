@@ -206,3 +206,78 @@ Enter the elements of the array:
 Sorted array:
 5 10 11 12 23
 ```
+### 6. Add two matrices
+
+```java
+import java.util.Scanner;
+
+public class MatrixAddition {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter the dimensions of the matrices
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+        System.out.print("Enter the number of columns: ");
+        int columns = scanner.nextInt();
+
+        // Initialize the matrices
+        int[][] matrix1 = new int[rows][columns];
+        int[][] matrix2 = new int[rows][columns];
+        int[][] sumMatrix = new int[rows][columns];
+
+        // Read the elements of the first matrix
+        System.out.println("Enter the elements of the first matrix:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                matrix1[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Read the elements of the second matrix
+        System.out.println("Enter the elements of the second matrix:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                matrix2[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Add the two matrices
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                sumMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+
+        // Display the sum matrix
+        System.out.println("The sum of the two matrices is:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print(sumMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+
+```
+
+```sh
+Enter the number of rows: 2
+Enter the number of columns: 2
+Enter the elements of the first matrix:
+12
+15
+14
+23
+Enter the elements of the second matrix:
+10
+12
+14
+13
+The sum of the two matrices is:
+22 27
+28 36
+```
