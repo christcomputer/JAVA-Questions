@@ -52,8 +52,6 @@ public class OddEvenChecker {
 }
 
 ```
-
-* output
   
 ```sh
 Enter a number: 5
@@ -96,8 +94,6 @@ public class SwapNumbers {
 
 ```
 
-* output
-
 ```sh
 Enter the first number: 10 
 Enter the second number: 20
@@ -109,4 +105,49 @@ Second number: 20
 After swap:      
 First number: 20 
 Second number: 10
+```
+### 4.Java Program to Find the Sum of Elements in an Array
+
+```java
+import java.util.Scanner;
+
+public class ArraySum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompt user to enter the number of elements
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+        
+        // Declare the array and read elements
+        int[] array = new int[n];
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();
+        }
+        
+        // Calculate the sum of elements
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += array[i];
+        }
+        
+        // Display the sum
+        System.out.println("The sum of the elements in the array is: " + sum);
+        
+        scanner.close();
+    }
+}
+
+```
+
+```sh
+Enter the number of elements in the array: 5
+Enter the elements of the array:
+10
+20
+10
+10
+10
+The sum of the elements in the array is: 60
 ```
