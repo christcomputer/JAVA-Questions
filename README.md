@@ -368,3 +368,54 @@ Sum of 2 and 3 (int): 5
 Sum of 2, 3 and 4 (int): 9
 Sum of 2.5 and 3.5 (double): 6.0
 ```
+### 9. Using Constructor Find the sum of two numbers
+
+```java
+import java.util.Scanner;
+
+class SumOfTwoNumbers {
+    private int num1;
+    private int num2;
+    private int sum;
+
+    // Constructor to initialize the numbers and calculate the sum
+    public SumOfTwoNumbers(int num1, int num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.sum = num1 + num2;
+    }
+
+    // Method to display the sum
+    public void displaySum() {
+        System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter two numbers
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        // Create an instance of SumOfTwoNumbers
+        SumOfTwoNumbers sumOfTwoNumbers = new SumOfTwoNumbers(num1, num2);
+
+        // Display the sum
+        sumOfTwoNumbers.displaySum();
+
+        scanner.close();
+    }
+}
+
+```
+
+```sh
+Enter the first number: 10
+Enter the second number: 12
+The sum of 10 and 12 is 22
+```
